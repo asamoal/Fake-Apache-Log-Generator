@@ -15,9 +15,9 @@ Generate a single log line to STDOUT
 $ python apache-fake-log-gen.py  
 ```
 
-Generate 100 log lines into a .log file
+Generate 100 log lines into a .log file named test.log
 ```
-$ python apache-fake-log-gen.py -n 100 -o LOG 
+$ python apache-fake-log-gen.py -n 100 -o LOG -f "test.log"
 ```
 
 Generate 100 log lines into a .gz file at intervals of 10 seconds
@@ -40,7 +40,7 @@ Detailed help
 ```
 $ python apache-fake-log-gen.py -h
 usage: apache-fake-log-gen.py [-h] [--output {LOG,GZ,CONSOLE}]
-                              [--num NUM_LINES] [--prefix FILE_PREFIX]
+                              [--num NUM_LINES] [--file-name FILE_NAME]
                               [--sleep SLEEP]
 
 Fake Apache Log Generator
@@ -51,8 +51,8 @@ optional arguments:
                         Write to a Log file, a gzip file or to STDOUT
   --num NUM_LINES, -n NUM_LINES
                         Number of lines to generate (0 for infinite)
-  --prefix FILE_PREFIX, -p FILE_PREFIX
-                        Prefix the output file name
+  --file-name FILE_NAME, -f FILE_NAME
+                        Output file name
   --sleep SLEEP, -s SLEEP
                         Sleep this long between lines (in seconds)
 ```
